@@ -15,11 +15,19 @@
 
 @layer components {
   .glass {
-    @apply bg-[#111111]/80 backdrop-blur-md border border-[#FFD700]/10;
+    background-color: rgba(17, 17, 17, 0.8);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 215, 0, 0.1);
+    border-radius: 0.5rem;
   }
 
   .glass-light {
-    @apply bg-[#1a1a1a]/50 backdrop-blur-sm border border-[#FFD700]/5;
+    background-color: rgba(26, 26, 26, 0.5);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 215, 0, 0.05);
+    border-radius: 0.5rem;
   }
 
   .text-gradient {
@@ -30,14 +38,51 @@
   }
 
   .section-container {
-    @apply max-w-7xl mx-auto px-4 md:px-6 lg:px-8;
+    max-width: 80rem;
+    margin: 0 auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  @media (min-width: 768px) {
+    .section-container {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .section-container {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
   }
 
   .cta-button {
-    @apply px-6 py-3 bg-primary text-primary-foreground rounded-lg font-semibold hover:bg-accent transition-colors duration-200;
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: #FFD700;
+    color: #000000;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    transition: background-color 0.2s;
+  }
+
+  .cta-button:hover {
+    background-color: #C9A800;
   }
 
   .cta-button-outline {
-    @apply px-6 py-3 border border-primary text-primary rounded-lg font-semibold hover:bg-[#FFD700]/10 transition-colors duration-200;
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border: 1px solid #FFD700;
+    color: #FFD700;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    transition: background-color 0.2s;
+  }
+
+  .cta-button-outline:hover {
+    background-color: rgba(255, 215, 0, 0.1);
   }
 }
