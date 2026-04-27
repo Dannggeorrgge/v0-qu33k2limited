@@ -29,7 +29,7 @@ export function Header({ onContactClick }: { onContactClick: () => void }) {
           onClick={handleLogoClick}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          className="font-semibold text-xl tracking-tighter text-primary hover:text-primary/80 transition-colors cursor-pointer"
+          className="font-semibold text-xl tracking-tighter text-primary hover:text-primary hover:shadow-[0_0_20px_rgba(255,215,0,0.6)] transition-all duration-300 cursor-pointer"
         >
           QU33K
         </motion.button>
@@ -43,10 +43,10 @@ export function Header({ onContactClick }: { onContactClick: () => void }) {
               <a
                 key={link.href}
                 href={link.href}
-                className={`text-sm font-medium transition-colors duration-300 ${
+                className={`text-sm font-medium transition-all duration-300 ${
                   isActive 
-                    ? 'text-primary' 
-                    : 'text-muted hover:text-foreground'
+                    ? 'text-primary shadow-[0_0_15px_rgba(255,215,0,0.4)]' 
+                    : 'text-muted hover:text-primary hover:shadow-[0_0_15px_rgba(255,215,0,0.4)]'
                 }`}
               >
                 {link.label}

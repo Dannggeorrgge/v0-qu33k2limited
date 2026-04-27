@@ -85,6 +85,7 @@ export function Portfolio() {
                     src={project.image}
                     alt={project.title}
                     fill
+                    loading="lazy"
                     className="object-cover brightness-75 hover:brightness-85 transition-all duration-300"
                   />
                 </div>

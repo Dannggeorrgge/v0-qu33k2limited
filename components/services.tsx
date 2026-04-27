@@ -90,6 +90,7 @@ export function Services() {
                   src={service.image}
                   alt={service.title}
                   fill
+                  loading="lazy"
                   className="object-cover brightness-75 group-hover:brightness-85 transition-all duration-300"
                 />
               </div>

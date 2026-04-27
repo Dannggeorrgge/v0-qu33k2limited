@@ -5,10 +5,10 @@ import { ChevronDown } from 'lucide-react'
 import { useCounter } from '@/hooks/use-counter'
 
 export function Hero({ onContactClick }: { onContactClick: () => void }) {
-  const yearsCount = useCounter(10)
-  const projectsCount = useCounter(50)
-  const satisfactionCount = useCounter(100)
-  const teamCount = useCounter(25)
+  const yearsCount = useCounter(10, 3000)
+  const projectsCount = useCounter(50, 3000)
+  const satisfactionCount = useCounter(100, 3000)
+  const teamCount = useCounter(25, 3000)
   return (
     <section className="min-h-screen pt-24 md:pt-32 pb-16 flex items-center relative overflow-hidden" style={{
       backgroundImage: 'url(https://hebbkx1anhila5yf.public.blob.vercel-storage.com/HERO3-RWpnUWB7534ZjGHG2NztXcbV8v19jk.jpg)',
@@ -17,7 +17,7 @@ export function Hero({ onContactClick }: { onContactClick: () => void }) {
       backgroundAttachment: 'fixed',
     }}>
       {/* Dark Overlay */}
-      <div className="absolute inset-0 -z-10 bg-black/85" />
+      <div className="absolute inset-0 -z-10 bg-black/92" />
       
       {/* Animated Background Elements */}
       <div className="absolute inset-0 -z-10 overflow-hidden">
@@ -46,7 +46,14 @@ export function Hero({ onContactClick }: { onContactClick: () => void }) {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="inline-block mb-6 px-4 py-2 glass rounded-full"
           >
-            <span className="text-primary text-sm font-semibold">Welcome to QU33K LIMITED</span>
+            <span className="text-primary text-sm font-semibold flex items-center gap-2">
+              Welcome to QU33K LIMITED
+              <motion.span
+                animate={{ opacity: [1, 0] }}
+                transition={{ duration: 0.7, repeat: Infinity }}
+                className="inline-block w-1.5 h-5 bg-primary"
+              />
+            </span>
           </motion.div>
 
           <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight text-pretty">
