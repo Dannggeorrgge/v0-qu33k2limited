@@ -5,7 +5,15 @@ import { ChevronDown } from 'lucide-react'
 
 export function Hero({ onContactClick }: { onContactClick: () => void }) {
   return (
-    <section className="min-h-screen pt-24 md:pt-32 pb-16 flex items-center relative overflow-hidden">
+    <section className="min-h-screen pt-24 md:pt-32 pb-16 flex items-center relative overflow-hidden" style={{
+      backgroundImage: 'url(https://hebbkx1anhila5yf.public.blob.vercel-storage.com/HERO3-RWpnUWB7534ZjGHG2NztXcbV8v19jk.jpg)',
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      backgroundAttachment: 'fixed',
+    }}>
+      {/* Dark Overlay */}
+      <div className="absolute inset-0 -z-10 bg-black/60" />
+      
       {/* Animated Background Elements */}
       <div className="absolute inset-0 -z-10 overflow-hidden">
         <motion.div
