@@ -14,6 +14,7 @@ export function Footer({ onBackToTop }: { onBackToTop: () => void }) {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
+            className="text-center md:text-left"
           >
             <div className="font-semibold text-xl tracking-tighter text-primary mb-2">
               QU33K
@@ -29,18 +30,19 @@ export function Footer({ onBackToTop }: { onBackToTop: () => void }) {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
             viewport={{ once: true }}
+            className="text-center md:text-left"
           >
             <h4 className="font-bold mb-4">Contact</h4>
             <div className="space-y-3">
-              <a href="tel:+234701234567" className="flex items-center gap-2 text-muted hover:text-primary transition-colors text-sm">
+              <a href="tel:+234701234567" className="flex items-center justify-center md:justify-start gap-2 text-muted hover:text-primary transition-colors text-sm">
                 <Phone size={16} />
                 +234 (0) 701 234 567
               </a>
-              <a href="mailto:info@qu33k.com" className="flex items-center gap-2 text-muted hover:text-primary transition-colors text-sm">
+              <a href="mailto:info@qu33k.com" className="flex items-center justify-center md:justify-start gap-2 text-muted hover:text-primary transition-colors text-sm">
                 <Mail size={16} />
                 info@qu33k.com
               </a>
-              <div className="flex items-start gap-2 text-muted text-sm">
+              <div className="flex items-start justify-center md:justify-start gap-2 text-muted text-sm">
                 <MapPin size={16} className="flex-shrink-0 mt-0.5" />
                 <p>Port Harcourt, Rivers State, Nigeria</p>
               </div>
@@ -53,6 +55,7 @@ export function Footer({ onBackToTop }: { onBackToTop: () => void }) {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
+            className="text-center md:text-left"
           >
             <h4 className="font-bold mb-4">Quick Links</h4>
             <div className="space-y-2">
@@ -79,7 +82,7 @@ export function Footer({ onBackToTop }: { onBackToTop: () => void }) {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
             viewport={{ once: true }}
-            className="flex flex-col items-start md:items-end justify-between"
+            className="flex flex-col items-center md:items-end justify-between"
           >
             <button
               onClick={onBackToTop}

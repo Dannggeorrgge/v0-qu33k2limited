@@ -17,17 +17,22 @@ export function Header({ onContactClick }: { onContactClick: () => void }) {
     { label: 'FAQs', href: '#faqs' },
   ]
 
+  const handleLogoClick = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+
   return (
     <header className="fixed top-0 left-0 right-0 z-50 glass">
       <div className="section-container flex items-center justify-between h-16 md:h-20">
         {/* Logo */}
-        <motion.div 
+        <motion.button 
+          onClick={handleLogoClick}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          className="font-semibold text-xl tracking-tighter text-primary"
+          className="font-semibold text-xl tracking-tighter text-primary hover:text-primary/80 transition-colors cursor-pointer"
         >
           QU33K
-        </motion.div>
+        </motion.button>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-8">

@@ -2,8 +2,13 @@
 
 import { motion } from 'framer-motion'
 import { ChevronDown } from 'lucide-react'
+import { useCounter } from '@/hooks/use-counter'
 
 export function Hero({ onContactClick }: { onContactClick: () => void }) {
+  const yearsCount = useCounter(10)
+  const projectsCount = useCounter(50)
+  const satisfactionCount = useCounter(100)
+  const teamCount = useCounter(25)
   return (
     <section className="min-h-screen pt-24 md:pt-32 pb-16 flex items-center relative overflow-hidden" style={{
       backgroundImage: 'url(https://hebbkx1anhila5yf.public.blob.vercel-storage.com/HERO3-RWpnUWB7534ZjGHG2NztXcbV8v19jk.jpg)',
@@ -12,7 +17,7 @@ export function Hero({ onContactClick }: { onContactClick: () => void }) {
       backgroundAttachment: 'fixed',
     }}>
       {/* Dark Overlay */}
-      <div className="absolute inset-0 -z-10 bg-black/75" />
+      <div className="absolute inset-0 -z-10 bg-black/85" />
       
       {/* Animated Background Elements */}
       <div className="absolute inset-0 -z-10 overflow-hidden">
@@ -91,17 +96,22 @@ export function Hero({ onContactClick }: { onContactClick: () => void }) {
             transition={{ duration: 0.6, delay: 1 }}
             className="grid grid-cols-2 md:grid-cols-4 gap-4"
           >
-            {[
-              { value: '10+', label: 'Years Experience' },
-              { value: '50+', label: 'Projects Delivered' },
-              { value: '100%', label: 'Client Satisfaction' },
-              { value: '25+', label: 'Team Members' },
-            ].map((stat, index) => (
-              <div key={index} className="glass-light p-4 rounded-lg">
-                <div className="text-2xl font-bold text-primary">{stat.value}</div>
-                <div className="text-xs text-muted">{stat.label}</div>
-              </div>
-            ))}
+            <div className="glass-light p-4 rounded-lg">
+              <div className="text-2xl font-bold text-primary">{yearsCount}+</div>
+              <div className="text-xs text-muted">Years Experience</div>
+            </div>
+            <div className="glass-light p-4 rounded-lg">
+              <div className="text-2xl font-bold text-primary">{projectsCount}+</div>
+              <div className="text-xs text-muted">Projects Delivered</div>
+            </div>
+            <div className="glass-light p-4 rounded-lg">
+              <div className="text-2xl font-bold text-primary">{satisfactionCount}%</div>
+              <div className="text-xs text-muted">Client Satisfaction</div>
+            </div>
+            <div className="glass-light p-4 rounded-lg">
+              <div className="text-2xl font-bold text-primary">{teamCount}+</div>
+              <div className="text-xs text-muted">Team Members</div>
+            </div>
           </motion.div>
         </motion.div>
       </div>
