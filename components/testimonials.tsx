@@ -64,14 +64,14 @@ export function Testimonials() {
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, margin: '-100px' }}
+          viewport={{ once: true, amount: 0.2 }}
           className="grid grid-cols-1 md:grid-cols-3 gap-8"
         >
           {testimonials.map((testimonial, index) => (
             <motion.div
               key={index}
               variants={itemVariants}
-              className="glass p-8 flex flex-col"
+              className="glass p-8 flex flex-col transition-all duration-300 hover:border-[#FFD700]/50 hover:shadow-[0_0_15px_rgba(255,215,0,0.15)]"
             >
               {/* Stars */}
               <div className="flex gap-1 mb-4">

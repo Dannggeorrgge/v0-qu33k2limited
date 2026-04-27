@@ -68,7 +68,12 @@ export function Hero({ onContactClick }: { onContactClick: () => void }) {
               className="cta-button-outline flex items-center justify-center gap-2"
             >
               Learn More
-              <ChevronDown size={18} />
+              <motion.div
+                animate={{ y: [0, 4, 0] }}
+                transition={{ duration: 2, repeat: Infinity }}
+              >
+                <ChevronDown size={18} />
+              </motion.div>
             </a>
           </motion.div>
 

@@ -65,14 +65,14 @@ export function Portfolio() {
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true }}
+          viewport={{ once: true, amount: 0.2 }}
           className="space-y-6"
         >
           {projects.map((project, index) => (
             <motion.div
               key={index}
               variants={itemVariants}
-              className="glass p-8 hover:border-primary/20 transition-colors duration-300"
+              className="glass p-8 transition-all duration-300 hover:border-[#FFD700]/50 hover:shadow-[0_0_15px_rgba(255,215,0,0.15)]"
             >
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {/* Placeholder Image */}

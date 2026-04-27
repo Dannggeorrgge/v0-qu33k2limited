@@ -85,7 +85,7 @@ export function Services() {
               <motion.div
                 key={index}
                 variants={itemVariants}
-                className="glass p-8 hover:border-primary/30 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10 group"
+                className="glass p-8 transition-all duration-300 group hover:border-[#FFD700]/50 hover:shadow-[0_0_15px_rgba(255,215,0,0.15)]"
               >
                 <div className="mb-4 p-3 bg-primary/10 rounded-lg w-fit group-hover:bg-primary/20 transition-colors">
                   <Icon size={28} className="text-primary" />

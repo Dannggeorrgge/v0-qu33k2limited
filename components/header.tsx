@@ -3,9 +3,11 @@
 import { useState } from 'react'
 import { Menu, X } from 'lucide-react'
 import { motion } from 'framer-motion'
+import { useActiveSection } from '@/hooks/use-active-section'
 
 export function Header({ onContactClick }: { onContactClick: () => void }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const activeSection = useActiveSection()
 
   const navLinks = [
     { label: 'Services', href: '#services' },
@@ -29,15 +31,23 @@ export function Header({ onContactClick }: { onContactClick: () => void }) {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-8">
-          {navLinks.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              className="text-muted hover:text-foreground transition-colors text-sm font-medium"
-            >
-              {link.label}
-            </a>
-          ))}
+          {navLinks.map((link) => {
+            const sectionId = link.href.slice(1)
+            const isActive = activeSection === sectionId
+            return (
+              <a
+                key={link.href}
+                href={link.href}
+                className={`text-sm font-medium transition-colors duration-300 ${
+                  isActive 
+                    ? 'text-primary' 
+                    : 'text-muted hover:text-foreground'
+                }`}
+              >
+                {link.label}
+              </a>
+            )
+          })}
         </nav>
 
         {/* CTA Button */}
