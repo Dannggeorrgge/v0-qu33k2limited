@@ -117,7 +117,7 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
                         value={formData.name}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 bg-[#1a1a1a] border border-primary/20 rounded-lg text-foreground placeholder-muted focus:outline-none focus:border-primary/50 transition-colors"
+                        className="w-full px-4 py-3 bg-[#1a1a1a] border border-primary/20 rounded-lg text-foreground placeholder-muted transition-all duration-300 focus:ring-2 focus:ring-[#FFD700]/50 focus:border-[#FFD700] focus:shadow-[0_0_10px_rgba(255,215,0,0.2)]"
                         placeholder="Your name"
                       />
                     </div>
@@ -133,7 +133,7 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
                         name="company"
                         value={formData.company}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 bg-[#1a1a1a] border border-primary/20 rounded-lg text-foreground placeholder-muted focus:outline-none focus:border-primary/50 transition-colors"
+                        className="w-full px-4 py-3 bg-[#1a1a1a] border border-primary/20 rounded-lg text-foreground placeholder-muted transition-all duration-300 focus:ring-2 focus:ring-[#FFD700]/50 focus:border-[#FFD700] focus:shadow-[0_0_10px_rgba(255,215,0,0.2)]"
                         placeholder="Your company"
                       />
                     </div>
@@ -150,7 +150,7 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
                         value={formData.phone}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 bg-[#1a1a1a] border border-primary/20 rounded-lg text-foreground placeholder-muted focus:outline-none focus:border-primary/50 transition-colors"
+                        className="w-full px-4 py-3 bg-[#1a1a1a] border border-primary/20 rounded-lg text-foreground placeholder-muted transition-all duration-300 focus:ring-2 focus:ring-[#FFD700]/50 focus:border-[#FFD700] focus:shadow-[0_0_10px_rgba(255,215,0,0.2)]"
                         placeholder="+234 (0) 701 234 567"
                       />
                     </div>
@@ -166,7 +166,7 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
                         value={formData.service}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 bg-[#1a1a1a] border border-primary/20 rounded-lg text-foreground focus:outline-none focus:border-primary/50 transition-colors"
+                        className="w-full px-4 py-3 bg-[#1a1a1a] border border-primary/20 rounded-lg text-foreground transition-all duration-300 focus:ring-2 focus:ring-[#FFD700]/50 focus:border-[#FFD700] focus:shadow-[0_0_10px_rgba(255,215,0,0.2)]"
                       >
                         <option value="">Select a service</option>
                         {services.map((service) => (
@@ -188,7 +188,7 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
                         value={formData.details}
                         onChange={handleChange}
                         rows={4}
-                        className="w-full px-4 py-3 bg-[#1a1a1a] border border-primary/20 rounded-lg text-foreground placeholder-muted focus:outline-none focus:border-primary/50 transition-colors resize-none"
+                        className="w-full px-4 py-3 bg-[#1a1a1a] border border-primary/20 rounded-lg text-foreground placeholder-muted transition-all duration-300 focus:ring-2 focus:ring-[#FFD700]/50 focus:border-[#FFD700] focus:shadow-[0_0_10px_rgba(255,215,0,0.2)] resize-none"
                         placeholder="Tell us about your project..."
                       />
                     </div>

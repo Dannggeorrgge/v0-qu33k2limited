@@ -3,9 +3,11 @@
 import { useState } from 'react'
 import { Menu, X } from 'lucide-react'
 import { motion } from 'framer-motion'
+import { useActiveSection } from '@/hooks/use-active-section'
 
 export function Header({ onContactClick }: { onContactClick: () => void }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const activeSection = useActiveSection()
 
   const navLinks = [
     { label: 'Services', href: '#services' },
@@ -15,29 +17,42 @@ export function Header({ onContactClick }: { onContactClick: () => void }) {
     { label: 'FAQs', href: '#faqs' },
   ]
 
+  const handleLogoClick = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+
   return (
     <header className="fixed top-0 left-0 right-0 z-50 glass">
       <div className="section-container flex items-center justify-between h-16 md:h-20">
         {/* Logo */}
-        <motion.div 
+        <motion.button 
+          onClick={handleLogoClick}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          className="font-semibold text-xl tracking-tighter text-primary"
+          className="font-semibold text-xl tracking-tighter text-primary hover:text-primary hover:shadow-[0_0_20px_rgba(255,215,0,0.6)] transition-all duration-300 cursor-pointer"
         >
           QU33K
-        </motion.div>
+        </motion.button>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-8">
-          {navLinks.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              className="text-muted hover:text-foreground transition-colors text-sm font-medium"
-            >
-              {link.label}
-            </a>
-          ))}
+          {navLinks.map((link) => {
+            const sectionId = link.href.slice(1)
+            const isActive = activeSection === sectionId
+            return (
+              <a
+                key={link.href}
+                href={link.href}
+                className={`text-sm font-medium transition-all duration-300 ${
+                  isActive 
+                    ? 'text-primary shadow-[0_0_15px_rgba(255,215,0,0.4)]' 
+                    : 'text-muted hover:text-primary hover:shadow-[0_0_15px_rgba(255,215,0,0.4)]'
+                }`}
+              >
+                {link.label}
+              </a>
+            )
+          })}
         </nav>
 
         {/* CTA Button */}

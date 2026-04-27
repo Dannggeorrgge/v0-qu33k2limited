@@ -2,10 +2,23 @@
 
 import { motion } from 'framer-motion'
 import { ChevronDown } from 'lucide-react'
+import { useCounter } from '@/hooks/use-counter'
 
 export function Hero({ onContactClick }: { onContactClick: () => void }) {
+  const yearsCount = useCounter(10, 3000)
+  const projectsCount = useCounter(50, 3000)
+  const satisfactionCount = useCounter(100, 3000)
+  const teamCount = useCounter(25, 3000)
   return (
-    <section className="min-h-screen pt-24 md:pt-32 pb-16 flex items-center relative overflow-hidden">
+    <section className="min-h-screen pt-24 md:pt-32 pb-16 flex items-center relative overflow-hidden" style={{
+      backgroundImage: 'url(https://hebbkx1anhila5yf.public.blob.vercel-storage.com/HERO3-RWpnUWB7534ZjGHG2NztXcbV8v19jk.jpg)',
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      backgroundAttachment: 'fixed',
+    }}>
+      {/* Dark Overlay */}
+      <div className="absolute inset-0 -z-10 bg-black/92" />
+      
       {/* Animated Background Elements */}
       <div className="absolute inset-0 -z-10 overflow-hidden">
         <motion.div
@@ -33,13 +46,19 @@ export function Hero({ onContactClick }: { onContactClick: () => void }) {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="inline-block mb-6 px-4 py-2 glass rounded-full"
           >
-            <span className="text-primary text-sm font-semibold">Welcome to QU33K LIMITED</span>
+            <span className="text-primary text-sm font-semibold flex items-center gap-2">
+              Welcome to QU33K LIMITED
+              <motion.span
+                animate={{ opacity: [1, 0] }}
+                transition={{ duration: 0.7, repeat: Infinity }}
+                className="inline-block w-1.5 h-5 bg-primary"
+              />
+            </span>
           </motion.div>
 
           <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight text-pretty">
-            Engineering{' '}
-            <span className="text-gradient">Excellence</span>
-            {' '}in Maritime & Civil Projects
+            Stalled Sites to{' '}
+            <span className="text-gradient">Completed Infrastructure</span>
           </h1>
 
           <motion.p
@@ -48,7 +67,7 @@ export function Hero({ onContactClick }: { onContactClick: () => void }) {
             transition={{ duration: 0.6, delay: 0.6 }}
             className="text-lg md:text-xl text-muted mb-10 max-w-2xl leading-relaxed"
           >
-            Professional marine dredging, building construction, and civil infrastructure solutions serving Port Harcourt and beyond. Over a decade of expertise delivering complex engineering projects on time and within budget.
+            We help Niger Delta developers and corporate clients escape mismanaged sites and budget blowouts through rigorous upfront engineering, transparent governance, and exhaustive feasibility studies integrated with your procurement team.
           </motion.p>
 
           <motion.div
@@ -68,7 +87,12 @@ export function Hero({ onContactClick }: { onContactClick: () => void }) {
               className="cta-button-outline flex items-center justify-center gap-2"
             >
               Learn More
-              <ChevronDown size={18} />
+              <motion.div
+                animate={{ y: [0, 4, 0] }}
+                transition={{ duration: 2, repeat: Infinity }}
+              >
+                <ChevronDown size={18} />
+              </motion.div>
             </a>
           </motion.div>
 
@@ -79,17 +103,22 @@ export function Hero({ onContactClick }: { onContactClick: () => void }) {
             transition={{ duration: 0.6, delay: 1 }}
             className="grid grid-cols-2 md:grid-cols-4 gap-4"
           >
-            {[
-              { value: '10+', label: 'Years Experience' },
-              { value: '50+', label: 'Projects Delivered' },
-              { value: '100%', label: 'Client Satisfaction' },
-              { value: '25+', label: 'Team Members' },
-            ].map((stat, index) => (
-              <div key={index} className="glass-light p-4 rounded-lg">
-                <div className="text-2xl font-bold text-primary">{stat.value}</div>
-                <div className="text-xs text-muted">{stat.label}</div>
-              </div>
-            ))}
+            <div className="glass-light p-4 rounded-lg">
+              <div className="text-2xl font-bold text-primary">{yearsCount}+</div>
+              <div className="text-xs text-muted">Years Experience</div>
+            </div>
+            <div className="glass-light p-4 rounded-lg">
+              <div className="text-2xl font-bold text-primary">{projectsCount}+</div>
+              <div className="text-xs text-muted">Projects Delivered</div>
+            </div>
+            <div className="glass-light p-4 rounded-lg">
+              <div className="text-2xl font-bold text-primary">{satisfactionCount}%</div>
+              <div className="text-xs text-muted">Client Satisfaction</div>
+            </div>
+            <div className="glass-light p-4 rounded-lg">
+              <div className="text-2xl font-bold text-primary">{teamCount}+</div>
+              <div className="text-xs text-muted">Team Members</div>
+            </div>
           </motion.div>
         </motion.div>
       </div>
