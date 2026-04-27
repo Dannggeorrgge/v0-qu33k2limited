@@ -1,16 +1,12 @@
 @import 'tailwindcss';
 
 @layer base {
-  * {
-    @apply border-border;
-  }
-  
-  body {
-    @apply bg-background text-foreground;
-  }
-
   html {
     scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground;
   }
 }
 
@@ -24,7 +20,7 @@
   }
 
   .text-gradient {
-    @apply bg-gradient-to-r from-primary to-gold-50 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent;
   }
 
   .section-container {
