@@ -15,11 +15,11 @@
 
 @layer components {
   .glass {
-    @apply bg-[#111111]/80 backdrop-blur-md border border-primary/10;
+    @apply bg-[#111111]/80 backdrop-blur-md border border-[#FFD700]/10;
   }
 
   .glass-light {
-    @apply bg-[#1a1a1a]/50 backdrop-blur-sm border border-primary/5;
+    @apply bg-[#1a1a1a]/50 backdrop-blur-sm border border-[#FFD700]/5;
   }
 
   .text-gradient {
@@ -35,6 +35,6 @@
   }
 
   .cta-button-outline {
-    @apply px-6 py-3 border border-primary text-primary rounded-lg font-semibold hover:bg-primary/10 transition-colors duration-200;
+    @apply px-6 py-3 border border-primary text-primary rounded-lg font-semibold hover:bg-[#FFD700]/10 transition-colors duration-200;
   }
 }
