@@ -12,7 +12,7 @@ export function Hero({ onContactClick }: { onContactClick: () => void }) {
       backgroundAttachment: 'fixed',
     }}>
       {/* Dark Overlay */}
-      <div className="absolute inset-0 -z-10 bg-black/60" />
+      <div className="absolute inset-0 -z-10 bg-black/75" />
       
       {/* Animated Background Elements */}
       <div className="absolute inset-0 -z-10 overflow-hidden">

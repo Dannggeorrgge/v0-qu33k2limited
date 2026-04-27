@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { CheckCircle2 } from 'lucide-react'
+import Image from 'next/image'
 
 const projects = [
   {
@@ -10,6 +11,7 @@ const projects = [
     year: '2021-2023',
     status: 'Completed',
     description: 'Large-scale port expansion project including dredging operations and infrastructure development.',
+    image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Onne%20Port%20Development-BF14vKPrAUn7KU3g8pU1ND8afkgOwB.jpg',
   },
   {
     title: 'Woji Creek Reclamation',
@@ -17,6 +19,7 @@ const projects = [
     year: '2022-2024',
     status: 'On Progress',
     description: 'Strategic land reclamation initiative converting waterway into valuable commercial real estate.',
+    image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Woji%20Creek%20Reclamation-l1IwL8diXGnsoI8HsiR5FMNbGQ5HUG.webp',
   },
   {
     title: 'Trans-Amadi Road Network',
@@ -24,6 +27,7 @@ const projects = [
     year: '2023-Present',
     status: 'On Progress',
     description: 'Comprehensive road infrastructure project improving connectivity across the Trans-Amadi industrial area.',
+    image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Trans-Amadi%20Road%20Network-buWp7RWiP7v8vSg4fQyOrclC7eEQid.webp',
   },
 ]
 
@@ -75,11 +79,14 @@ export function Portfolio() {
               className="glass p-8 transition-all duration-300 hover:border-[#FFD700]/50 hover:shadow-[0_0_15px_rgba(255,215,0,0.15)]"
             >
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                {/* Placeholder Image */}
-                <div className="bg-[#1a1a1a] rounded-lg h-48 md:h-full min-h-48 flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="text-muted text-sm font-medium">PROJECT IMAGE</div>
-                  </div>
+                {/* Project Image */}
+                <div className="relative rounded-lg h-48 md:h-full min-h-48 overflow-hidden">
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    fill
+                    className="object-cover brightness-75 hover:brightness-85 transition-all duration-300"
+                  />
                 </div>
 
                 {/* Content */}
