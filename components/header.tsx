@@ -24,7 +24,7 @@ export function Header({ onContactClick }: { onContactClick: () => void }) {
           animate={{ opacity: 1 }}
           className="font-semibold text-xl tracking-tighter text-primary"
         >
-          QU33K LIMITED
+          QU33K
         </motion.div>
 
         {/* Desktop Navigation */}
