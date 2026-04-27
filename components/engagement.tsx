@@ -6,41 +6,41 @@ import { Check } from 'lucide-react'
 const tiers = [
   {
     name: 'Site Survey',
-    description: 'Comprehensive site assessment',
+    description: 'Stop guessing. Get certainty.',
     price: 'Starting at ₦500K',
     features: [
-      'Detailed site investigation',
-      'Soil testing & analysis',
-      'Environmental assessment',
-      'Preliminary report',
-      'Site recommendations',
+      'Soil testing & contamination scan',
+      'Utility & boundary mapping',
+      'Environmental & permit roadmap',
+      'Cost & timeline projection',
+      'Rework-prevention report',
     ],
     highlighted: false,
   },
   {
     name: 'Full Project Delivery',
-    description: 'End-to-end project execution',
+    description: 'Zero-drama execution.',
     price: 'Custom Quote',
     features: [
-      'Complete project design',
-      'Planning & permitting',
-      'Full construction supervision',
-      'Quality assurance',
-      'Final inspection & handover',
-      'Post-project support',
+      'Design through final handover',
+      'Permits & compliance managed',
+      'Weekly milestone reports',
+      'Corporate governance integration',
+      'Quality & materials certification',
+      'Audit-ready documentation',
     ],
     highlighted: true,
   },
   {
     name: 'Retainer/Ongoing',
-    description: 'Continuous support services',
+    description: 'Prevent downtime. Maintain discipline.',
     price: 'Flexible Terms',
     features: [
-      'Monthly site management',
-      'Maintenance operations',
-      'Emergency response',
-      'Quarterly reporting',
-      'Priority support',
+      'Continuous maintenance & supervision',
+      'Emergency response teams',
+      'Monthly audit-standard reporting',
+      'Preventive equipment maintenance',
+      ' 24/7 priority support',
     ],
     highlighted: false,
   },
@@ -76,9 +76,9 @@ export function Engagement() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">Engagement Tiers</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">Transparent Scoping & Engagement</h2>
           <p className="text-lg text-muted max-w-2xl mx-auto">
-            Choose the service package that fits your project scope
+            Marine infrastructure and heavy civil works range from hundreds of millions to billions of Naira. Wrong contractors cost even more in rework. Here&apos;s how we protect your capital.
           </p>
         </motion.div>
 

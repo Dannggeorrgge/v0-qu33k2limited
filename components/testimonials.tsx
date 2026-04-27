@@ -5,19 +5,19 @@ import { Star } from 'lucide-react'
 
 const testimonials = [
   {
-    quote: 'QU33K LIMITED delivered our port expansion project ahead of schedule with exceptional attention to detail. Their team&apos;s expertise in marine operations is unmatched.',
+    quote: 'The previous contractor left us stranded. QU33K stepped in, mapped the site in 2 weeks, and delivered 3 months ahead of revised timeline. Their weekly reporting gave us back trust in the project.',
     author: 'Chief Engr. Okafor',
     role: 'Port Authority Director',
     rating: 5,
   },
   {
-    quote: 'Professional, reliable, and committed to excellence. They handled our land reclamation project flawlessly, turning our vision into reality with minimal disruption.',
+    quote: 'We were hemorrhaging money on cost overruns with another firm. QU33K&apos;s upfront survey caught geotechnical issues nobody else found. Saved us ₦200M in rework. Now 18 months clear of initial budget.',
     author: 'Mrs. Ada Nwosu',
     role: 'Real Estate Developer',
     rating: 5,
   },
   {
-    quote: 'Outstanding project management and technical expertise. QU33K LIMITED demonstrates the highest standards of safety and quality in every aspect of their work.',
+    quote: 'Our corporate audit standards are strict. QU33K provides documentation that passes every check—daily logs, material certs, milestone proof. No surprises, no drama.',
     author: 'Eng. Tunde Adeyemi',
     role: 'Infrastructure Consultant',
     rating: 5,
@@ -54,9 +54,9 @@ export function Testimonials() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">Client Testimonials</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">From Stalled to Delivered</h2>
           <p className="text-lg text-muted max-w-2xl mx-auto">
-            What our clients say about working with QU33K LIMITED
+            How we took over failed projects and turned budget chaos into documented completions
           </p>
         </motion.div>
 

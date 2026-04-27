@@ -7,32 +7,32 @@ const services = [
   {
     icon: Anchor,
     title: 'Marine Dredging',
-    description: 'Professional dredging operations including channel deepening, sediment removal, and waterway maintenance.',
+    description: 'Eliminate waterway navigation issues through precision excavation. We deploy modern dredgers with dedicated site supervisors and weekly milestone reporting.',
   },
   {
     icon: Building2,
     title: 'Building Construction',
-    description: 'Complete construction services from foundation to finishing, ensuring structural integrity and quality.',
+    description: 'Stop budget blowouts on structural projects. We execute to corporate standards with daily site logs, transparent billing, and verified completion milestones.',
   },
   {
     icon: Zap,
     title: 'Site Excavation',
-    description: 'Comprehensive excavation services for various project types with precision and safety standards.',
+    description: 'Remove the guesswork from ground work. Our exhaustive upfront surveys prevent expensive surprises with precision equipment and certified operators.',
   },
   {
     icon: TrendingUp,
     title: 'Land Reclamation',
-    description: 'Strategic land reclamation projects converting water bodies into valuable usable real estate.',
+    description: 'Transform water into productive assets without delays. We handle permits, environmental compliance, and staged delivery matched to your capital budgets.',
   },
   {
     icon: Wrench,
     title: 'Civil Infrastructure',
-    description: 'Design and execution of critical infrastructure including roads, bridges, and utilities.',
+    description: 'Build roads and utilities that last. Rigorous materials testing, quality assurance at every phase, and post-project documentation for your audit files.',
   },
   {
     icon: CheckSquare,
     title: 'Project Management',
-    description: 'End-to-end project oversight ensuring timely delivery, quality compliance, and budget adherence.',
+    description: 'Full oversight integrated with your systems. Weekly reports, milestone-based billing, and dedicated site supervisors accountable to your corporate governance.',
   },
 ]
 
@@ -66,9 +66,9 @@ export function Services() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">Our Services</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">How We Make It Happen</h2>
           <p className="text-lg text-muted max-w-2xl mx-auto">
-            Comprehensive engineering and construction solutions tailored to your project needs
+            Six mechanisms to eliminate delays, cost overruns, and contractor drama
           </p>
         </motion.div>
 

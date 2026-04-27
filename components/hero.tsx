@@ -37,9 +37,8 @@ export function Hero({ onContactClick }: { onContactClick: () => void }) {
           </motion.div>
 
           <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight text-pretty">
-            Engineering{' '}
-            <span className="text-gradient">Excellence</span>
-            {' '}in Maritime & Civil Projects
+            Stalled Sites to{' '}
+            <span className="text-gradient">Completed Infrastructure</span>
           </h1>
 
           <motion.p
@@ -48,7 +47,7 @@ export function Hero({ onContactClick }: { onContactClick: () => void }) {
             transition={{ duration: 0.6, delay: 0.6 }}
             className="text-lg md:text-xl text-muted mb-10 max-w-2xl leading-relaxed"
           >
-            Professional marine dredging, building construction, and civil infrastructure solutions serving Port Harcourt and beyond. Over a decade of expertise delivering complex engineering projects on time and within budget.
+            We help Niger Delta developers and corporate clients escape mismanaged sites and budget blowouts through rigorous upfront engineering, transparent governance, and exhaustive feasibility studies integrated with your procurement team.
           </motion.p>
 
           <motion.div
