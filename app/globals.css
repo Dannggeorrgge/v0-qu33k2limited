@@ -3,10 +3,13 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    background-color: #000000;
+    color: #FFFFFF;
   }
 
   body {
-    @apply bg-background text-foreground;
+    background-color: #000000;
+    color: #FFFFFF;
   }
 }
 
@@ -28,7 +31,7 @@
   }
 
   .cta-button {
-    @apply px-6 py-3 bg-primary text-primary-foreground rounded-lg font-semibold hover:bg-gold-400 transition-colors duration-200;
+    @apply px-6 py-3 bg-primary text-primary-foreground rounded-lg font-semibold hover:bg-accent transition-colors duration-200;
   }
 
   .cta-button-outline {
